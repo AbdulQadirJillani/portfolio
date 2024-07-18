@@ -1,0 +1,57 @@
+---
+import Project from '@/components/Project.astro'
+import Heading from './Heading.astro'
+import gericht from '../../src/assets/gericht.png'
+import fitnesspack from '../../src/assets/fitnesspack.png'
+import medeval from '../../src/assets/medeval.png'
+import builders from '../../src/assets/builders.png'
+import astro from '../../src/assets/astro.svg'
+import react from '../../src/assets/react.svg'
+import reactrouter from '../../src/assets/reactrouter.svg'
+import firebase from '../../src/assets/firebase.svg'
+import tailwind from '../../src/assets/tailwind.svg'
+import css from '../../src/assets/css.svg'
+import framer from '../../src/assets/framer.svg'
+import Container from './Container.astro'
+
+const stackInfo = [
+    {
+        image: gericht,
+        name: 'Gericht',
+        description: 'A full blown web app for ordering food from a restaurant, designed in figma and developed using react, tailwind css and firebase.',
+        link: 'https://gericht-7ao.pages.dev/',
+        stack: [react, reactrouter, firebase, tailwind]
+    },
+    {
+        image: fitnesspack,
+        name: 'The Fitness Pack',
+        description: 'An aesthetically pleasing landing page for a fitness website, designed in figma and developed using react.',
+        link: 'https://the-fitness-pack.pages.dev/',
+        stack: [astro, react, css]
+    },
+    {
+        image: medeval,
+        name: 'Medeval',
+        description: 'A quiz app for medical students for effective learning developed using react.',
+        link: 'https://medeval.pages.dev/',
+        stack: [react, reactrouter, css]
+    },
+    {
+        image: builders,
+        name: 'Builders',
+        description: 'A visually stunning construction website landing page designed and developed using framer.',
+        link: 'https://buildersio.framer.ai/',
+        stack: [react, framer]
+    }
+]
+---
+<Container id="Projects">
+    <Heading class="mb-5 md:mb-8">
+        A small selection of <span class="text-[#cbacf9]">recent projects</span>
+    </Heading>
+    <div class="content-start justify-center grid md:grid-cols-2 gap-5 lg:gap-8">
+        {
+            stackInfo.map((obj) => <Project image={obj.image} name={obj.name} description={obj.description} link={obj.link} stack={obj.stack} />)
+        }
+    </div>
+</Container>

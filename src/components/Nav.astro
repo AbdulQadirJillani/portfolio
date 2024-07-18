@@ -1,0 +1,22 @@
+<nav class="fixed w-full text-white flex justify-center items-center z-[999]">
+    <ul class="flex justify-center items-center w-full gap-6 bg-[#111928BF] border border-[#1E2034] backdrop-blur-xl px-10 py-6 md:w-fit md:rounded-xl md:mt-3">
+        <a class="hover:text-[#cbacf9]" href="#Home">Home</a>
+        <a class="hover:text-[#cbacf9]" href="#About">About</a>
+        <a class="hover:text-[#cbacf9]" href="#Projects">Projects</a>
+        <a class="hover:text-[#cbacf9]" href="#Contact">Contact</a>
+    </ul>
+</nav>
+
+<script>
+    const nav = document.querySelector('nav')
+    let currentScrollY = 0
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > currentScrollY) {
+            nav.classList.add('hidden')
+            currentScrollY = window.scrollY
+        } else {
+            nav.classList.remove('hidden')
+            currentScrollY = window.scrollY
+        }
+    })
+</script>

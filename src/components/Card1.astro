@@ -1,0 +1,12 @@
+---
+import { Image } from "astro:assets";
+import img from "../../src/assets/laptop.avif"
+import CardContainer from "./CardContainer.astro";
+---
+
+<CardContainer class="relative md:col-span-10 lg:row-span-2 lg:col-span-6">
+    <Image class="object-cover w-full h-full rounded-[inherit]" src={img} alt="laptop" loading="eager">
+    <p class="absolute bottom-3 left-5">
+        I prioritize client collaboration, fostering open communication
+    </p>
+</CardContainer>

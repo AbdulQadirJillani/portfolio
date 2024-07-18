@@ -1,0 +1,21 @@
+---
+import Container from "./Container.astro"
+import Heading from "./Heading.astro"
+import StyledButton from "./StyledButton.astro"
+import Text from "./Text.astro"
+---
+
+<Container id="Contact" class="flex flex-col justify-center items-center gap-5">
+    <Heading class="lg:max-w-[55%]">
+        Ready to take <span class="text-[#cbacf9]">your</span> digital presence to the next level?
+    </Heading>
+    <Text class="pb-5 text-center text-pretty">
+        Reach out to me today and let's discuss how I can help you achieve your goals
+    </Text>
+    <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=abdulqadir786687786@gmail.com" target="_blank">
+        <StyledButton class="flex gap-3 justify-center items-center px-12 py-6 text-base">
+            <span>Let's get in touch</span>
+            <i class="pi pi-send"></i>
+        </StyledButton>
+    </a>
+</Container>

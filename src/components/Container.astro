@@ -1,0 +1,8 @@
+---
+import { cn } from "@/lib/utils"
+const props = Astro.props
+---
+
+<section id={props.id} class={cn("min-h-screen px-[10%] py-[5%]", props.class)}>
+    <slot/>
+</section>

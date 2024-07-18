@@ -1,0 +1,30 @@
+---
+import Heading from './Heading.astro'
+import ApproachCard from './ApproachCard.astro'
+import Container from './Container.astro'
+const approach = [
+    {
+        title: "Planning & Strategy",
+        desc: "We'll collaborate to map out your website's goals, target audience, and key functionalities. We'll discuss things like site structure, navigation, and content requirements."
+    },
+    {
+        title: "Development & Progress Update",
+        desc: "Once we agree on the plan, I cue my lofi playlist and dive into coding. From initial sketches to polished code, I keep you updated every step of the way."
+    },
+    {
+        title: "Development & Launch",
+        desc: "This is where the magic happens! Based on the approved design, I'll translate everything into functional code, building your website from the ground up."
+    }
+]
+---
+
+<Container class="min-h-fit">
+    <Heading class="mb-5 md:mb-8">
+        My <span class="text-[#cbacf9]">approach</span>
+    </Heading>
+    <div class="grid lg:grid-cols-3 gap-5">
+        {
+            approach.map((i) => <ApproachCard title={i.title} desc={i.desc} />)
+        }
+    </div>
+</Container>

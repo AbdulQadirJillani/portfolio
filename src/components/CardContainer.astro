@@ -1,0 +1,14 @@
+---
+import { cn } from "@/lib/utils";
+const props = Astro.props;
+---
+
+<div class={cn("card min-h-[125px] max-w-[80vw] bg-[#04071D] border border-[#1E2034] rounded-xl", props.class)}>
+    <slot/>
+</div>
+
+<style>
+    .card{
+        background-image: url('../assets/grid.svg');
+    }
+    </style>

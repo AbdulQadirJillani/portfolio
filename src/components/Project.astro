@@ -1,0 +1,37 @@
+---
+import {
+  Card,
+  CardHeader,
+  CardContent,
+  CardFooter
+} from "@/components/ui/card"
+import { Image } from "astro:assets"
+import Tools from "@/components/Tools.astro"
+import StyledButton from "./StyledButton.astro"
+import SubHeading from "./SubHeading.astro"
+import Text from "./Text.astro"
+const { image, name, description, stack, link } = Astro.props
+---
+
+<Card className="bg-[#04071D] border-[#1E2034]">
+
+    <CardHeader>
+      <Image class="rounded-lg" src={image} alt="" loading="lazy"/>
+    </CardHeader>
+
+    <CardContent>
+      <SubHeading class="mb-3">{name}</SubHeading>
+      <Text>{description}</Text>
+    </CardContent>
+
+    <CardFooter className="flex flex-col justify-center items-center gap-5">
+      <Tools stack={stack}/>
+      <a href={link} target="_blank">
+        <StyledButton class="px-12 py-6 flex justify-center items-center gap-3">
+          <span>Check Live Site</span>
+          <i class="pi pi-send"></i>
+        </StyledButton>
+      </a>
+    </CardFooter>
+
+  </Card>

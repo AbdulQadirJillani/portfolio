@@ -1,0 +1,44 @@
+---
+import { Image } from "astro:assets";
+import Text from "./Text.astro";
+import github from "../../src/assets/github.svg"
+import linkedin from "../../src/assets/linkedin.svg"
+import contra from "../../src/assets/contra.png"
+import { Button } from "./ui/button";
+const socials = [
+    {
+        href: "https://github.com/AbdulQadirJillani",
+        src: github,
+        alt: "github-link",
+    },
+    {
+        href: "https://www.linkedin.com/in/sheikh-abdul-qadir-jillani/",
+        src: linkedin,
+        alt: "linkedin-link",
+    },
+    {
+        href: "https://contra.com/sheikh_abdul_qadir_jill_2vi3z0l3",
+        src: contra,
+        alt: "contra-link",
+    }
+]
+---
+
+<footer class="px-[10%] py-[5%] flex gap-3 flex-col md:flex-row justify-between items-center">
+    <Text class="text-white">
+        Copyright © 2024 Sheikh Abdul Qadir Jillani
+    </Text>
+    <div class="flex justify-end items-center gap-5">
+        {
+            socials.map((i) => {
+                return(
+                    <a href={i.href} target="_blank">
+                        <Button className="px-2 border border-[#1E2034]">
+                            <Image class="size-7" src={i.src} alt={i.alt} />
+                        </Button>
+                    </a>
+                )
+            })
+        }
+    </div>
+</footer>

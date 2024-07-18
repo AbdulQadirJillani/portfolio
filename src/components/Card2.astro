@@ -1,0 +1,14 @@
+---
+import { Image } from "astro:assets";
+import CardContainer from "./CardContainer.astro";
+import SubHeading from "./SubHeading.astro";
+import globe from "../assets/globe.svg"
+---
+<CardContainer class="relative px-5 py-3 flex items-center justify-between md:col-span-5 lg:col-span-4 group overflow-hidden">
+    <SubHeading class="text-balance group-hover:translate-x-3 transition-transform">
+        I am very flexible with time zone communications
+    </SubHeading>
+    <div class="w-[100px] group-hover:translate-x-3 transition-transform">
+        <Image src={globe} alt="" />
+    </div>
+</CardContainer>

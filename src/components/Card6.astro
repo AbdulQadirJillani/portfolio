@@ -1,0 +1,20 @@
+---
+import CardContainer from "./CardContainer.astro";
+import StyledButton from "./StyledButton.astro";
+import SubHeading from "./SubHeading.astro";
+---
+
+<CardContainer class="flex flex-col justify-center items-center gap-5 px-5 py-3 md:col-span-5 lg:col-span-4 group overflow-hidden">
+    <SubHeading class="text-balance text-center group-hover:translate-x-3 transition-transform">Do you want to start a project together?</SubHeading>
+    <StyledButton class="copybtn flex gap-3 group-hover:translate-x-3 transition-transform">
+        <i class="pi pi-copy"></i>
+        <span>Copy my email address</span>
+    </StyledButton>
+</CardContainer>
+
+<script>
+    document.querySelector('.copybtn').addEventListener('click', () => {
+        navigator.clipboard.writeText('abdulqadir786687786@gmail.com')
+        alert('copied!')
+    })
+</script>

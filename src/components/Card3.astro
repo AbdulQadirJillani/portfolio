@@ -1,0 +1,23 @@
+---
+import CardContainer from "./CardContainer.astro";
+import SubHeading from "./SubHeading.astro";
+import astro from '../../src/assets/astro.svg'
+import react from '../../src/assets/react.svg'
+import next from '../../src/assets/next.svg'
+import firebase from '../../src/assets/firebase.svg'
+import tailwind from '../../src/assets/tailwind.svg'
+import { Image } from "astro:assets";
+const stack = [ astro, react, next, firebase, tailwind ]
+---
+
+<CardContainer class="grid gap-2 px-5 py-3 items-center md:col-span-5 lg:col-span-4 lg:grid-cols-2 lg:gap-5 group overflow-hidden">
+    <div class="flex flex-col gap-1 group-hover:translate-x-3 transition-transform">
+        <p class="text-[#C1C2D3] font-normal text-sm md:text-base">I constantly try to improve</p>
+        <SubHeading class="text-balance">My Tech Stack</SubHeading>
+    </div>
+    <div class="flex flex-wrap gap-3 group-hover:translate-x-3 transition-transform">
+        {
+            stack.map((i) => <Image class="size-7" src={i} alt=""/>)
+        }
+    </div>
+</CardContainer>

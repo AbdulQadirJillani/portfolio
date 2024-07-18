@@ -1,0 +1,24 @@
+---
+import 'primeicons/primeicons.css';
+import SubHeading from "./SubHeading.astro";
+---
+
+<section id="Home" class="hero min-h-screen px-[10%] py-[5%] bg-no-repeat flex flex-col justify-center items-center gap-5">
+    <h1 class="max-w-[25ch] font-bold text-4xl md:text-5xl lg:text-6xl leading-relaxed text-center text-white mt-[72px]">
+        Transforming Concepts into Seamless <span class="text-[#cbacf9]">User Experiences</span>
+    </h1>
+    <SubHeading class="font-normal pb-5 text-center text-pretty">
+        Hi! I'm Jillani, a Frontend Developer.
+    </SubHeading>
+    <a href="#About" aria-label="show more">
+        <button class="animate-bounce size-12 rounded-full text-white bg-[#04071D] border-2 border-[#1E2034]">
+            <i class="pi pi-arrow-down"></i>
+        </button>
+    </a>
+</section>
+
+<style>
+    .hero {
+        background-image: url('../assets/bg.png');
+    }
+</style>

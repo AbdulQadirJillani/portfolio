@@ -1,0 +1,10 @@
+---
+import { Image } from "astro:assets"
+const { stack } = Astro.props
+---
+
+<div class="h-9 flex gap-1">
+    {
+        stack.map((i) => <Image class='size-9 rounded-full border border-[#1E2034] backdrop-blur-lg' src={i} alt=""/>)
+    }
+</div>

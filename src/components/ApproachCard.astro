@@ -1,0 +1,26 @@
+---
+import {
+    Card,
+    CardHeader,
+    CardContent
+  } from "@/components/ui/card"
+import SubHeading from "./SubHeading.astro"
+import Text from "./Text.astro"
+
+const { title, desc } = Astro.props
+---
+<Card className="relative bg-[#04071D] border-[#1E2034] lg:py-12 text-white group">
+
+    <CardHeader>
+        <SubHeading class="lg:text-center">
+            {title}
+        </SubHeading>
+    </CardHeader>
+
+    <CardContent>
+        <Text class="lg:text-center">
+            {desc}
+        </Text>
+    </CardContent>
+</Card>
+  

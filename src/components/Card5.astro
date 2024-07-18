@@ -1,0 +1,19 @@
+---
+import CardContainer from "./CardContainer.astro";
+import SubHeading from "./SubHeading.astro";
+import x from '../assets/b5.svg'
+import { Image } from "astro:assets";
+---
+
+<CardContainer class="items-center md:row-span-2 md:col-span-5 lg:col-span-6 group overflow-hidden">
+    <div class="card5 h-full flex flex-col gap-1 justify-center px-5 py-3 bg-no-repeat bg-right-bottom bg-contain">
+        <p class="text-[#C1C2D3] font-normal text-sm md:text-base  group-hover:translate-x-3 transition-transform">The Inside Scoop</p>
+        <SubHeading class="text-balance max-w-[25ch] group-hover:translate-x-3 transition-transform">Currently building a React Native mobile app</SubHeading>
+    </div>
+</CardContainer>
+
+<style>
+.card5{
+    background-image: url('../assets/b5.svg');
+}
+</style>
